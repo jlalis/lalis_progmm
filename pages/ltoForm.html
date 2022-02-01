@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+  img {
+    width:50%;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="p-5 text-white text-center" style="background-color: #97bec4;">
+    <h1>LTO Form</h1>
+    <p>Resize this responsive page to see the effect!</p> 
+  </div>
+  
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="./userHome.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./updateUser.html">Update</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ltoForm.html">LTO Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Logout</a>
+          </li>
+    
+        </ul>
+      </div>
+    </nav>
+    
+  
+  <div class="container mt-3">
+      <h2>LTO form </h2>
+      <button id="saveFormBtn" type="submit" class="btn btn-primary">Submit</button>
+      <br><br>
+      <form>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">NAME</span>
+              </div>
+              <input id="name_fmname" type="text" class="form-control" placeholder="Family Name">
+              <input id="name_fname" type="text" class="form-control" placeholder="First Name">
+              <input id="name_mname" type="text" class="form-control" placeholder="Middle Name">
+          </div>
+          <br>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">PRESENT ADDRESS</span>
+              </div>
+              <input id="presentAdd" type="text" class="form-control" placeholder="No., Street/Municipality, Province">
+          </div>
+          <br>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">TEL NO./CP NO.</span>
+              </div>
+              <input id="telcp" type="text" class="form-control" placeholder="Tel. No. / CP No.">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="">TIN</span>
+              </div>
+              <input id="tinn" type="text" class="form-control" placeholder="TIN">
+          </div>
+          <br>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">NATIONALITY</span>
+              </div>
+              <input id="ntn" type="text" class="form-control" placeholder="Nationality">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="">SEX</span>
+              </div>
+              <input id="sx" type="text" class="form-control" placeholder="M/F">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="">BIRTHDATE</span>
+              </div>
+              <input id="bdate" type="text" class="form-control" placeholder="YYYY/MM/DD">
+          </div>
+          <br>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">HEIGHT</span>
+              </div>
+              <input id="hayt" type="text" class="form-control" placeholder="cm">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="">WEIGHT</span>
+              </div>
+              <input id="weyt" type="text" class="form-control" placeholder="kg">
+          </div>
+          <br>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="">LICENSE NUMBER</span>
+              </div>
+              <input id="licnum" type="text" class="form-control" placeholder="">
+          </div>
+          <br>
+          <br>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="namelto">BIRTHPLACE</span>
+            </div>
+            <input id="siti" type="text" class="form-control" placeholder="CITY">
+            <input id="muni" type="text" class="form-control" placeholder="MUNICIPALITY">
+            <input id="prov" type="text" class="form-control" placeholder="PROVINCE">
+        </div>
+          <br>
+          <br>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="namelto">FATHER'S NAME (indicate even if deceased)</span>
+            </div>
+            <input id="f_fmname" type="text" class="form-control" placeholder="FAMILY NAME">
+            <input id="f_fname" type="text" class="form-control" placeholder="FIRST NAME">
+            <input id="f_mname" type="text" class="form-control" placeholder="MIDDLE NAME">
+        </div>
+          <br>
+          <br>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="namelto">MOTHER'S NAME (indicate even if deceased)</span>
+            </div>
+            <input id="m_fmname" type="text" class="form-control" placeholder="FAMILY NAME">
+            <input id="m_fname" type="text" class="form-control" placeholder="FIRST NAME">
+            <input id="m_mname" type="text" class="form-control" placeholder="MIDDLE NAME">
+        </div>
+          <br>
+          <br>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="namelto">SPOUSE'S NAME (indicate even if deceased)</span>
+            </div>
+            <input id="s_fmname" type="text" class="form-control" placeholder="FAMILY NAME">
+            <input id="s_fname" type="text" class="form-control" placeholder="FIRST NAME">
+            <input id="s_mname" type="text" class="form-control" placeholder="MIDDLE NAME">
+        </div>
+          <br>
+          <br>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="">EMPLOYER'S BUSINESS NAME</span>
+            </div>
+            <input id="emp_bname" type="text" class="form-control" placeholder="">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="">TEL NO.</span>
+            </div>
+            <input id="emp_telnum" input="" type="text" class="form-control" placeholder="">
+        </div>
+        <br>
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="">EMPLOYER'S BUSINESS ADDRESS </span>
+          </div>
+          <input id="emp_baddr" type="text" class="form-control" placeholder="">
+      </div>
+      <br>
+      <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id=""> EMERGENCY CONTACT PERSON</span>
+        </div>
+        <input id="eme_contper" type="text" class="form-control" placeholder="">
+    </div>
+    <br>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="">EMERGENCY CONTACT ADDRESS</span>
+      </div>
+      <input id="eme_contaddr" type="text" class="form-control" placeholder="">
+      <div class="input-group-prepend">
+          <span class="input-group-text" id="">EMERGENCY CONTACT NO.</span>
+      </div>
+      <input id="eme_contno" type="text" class="form-control" placeholder="">
+  </div>
+  <br>
+  <div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id=""> AGENCY CODE</span>
+    </div>
+    <input id="agency_code" type="text" class="form-control" placeholder="">
+  </div>
+  <br>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">ISSUE DATE</span>
+    </div>
+    <input id="issue_date" type="text" class="form-control" placeholder="">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="">EXPIRY DATE</span>
+    </div>
+    <input id="exp_date" type="text" class="form-control" placeholder="">
+  </div>
+  <br>
+          <label>CS:  </label>
+          <div class="form-check form-check-inline">
+              
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="single1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">1. Single</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="married1" value="option2">
+              <label class="form-check-label" for="inlineRadio2">2. Married</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="widowed1" value="option3">
+              <label class="form-check-label" for="inlineRadio3">3. Widowed</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="separated1" value="option4">
+              <label class="form-check-label" for="inlineRadio4">4. Separated</label>
+          </div>
+          <br>
+          <br>
+          <label>License Classification Applied for (LCA):  </label>
+          <div class="form-check form-check-inline">
+              
+              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="sdp" value="option5">
+              <label class="form-check-label" for="inlineRadio1">1. Student-Driver's Permit</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="dl" value="option6">
+              <label class="form-check-label" for="inlineRadio2">2. Driver's License</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="cl" value="option7">
+              <label class="form-check-label" for="inlineRadio3">3. Conductor's License</label>
+          </div>
+          <br>
+          <br>
+        <label>Driving Skills Acquired from (For DL Applicants Only):  </label> <br>
+        <div class="form-check form-check-inline">
+            
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="dsi" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1. Driving School</label>
+            <label class="form-check-label" for="inlineRadio1">Instructor</label>
+        </div>
+          <input id="dsi1" type="text" class="form-control" placeholder="">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="plp" value="option2">
+            <label class="form-check-label" for="inlineRadio2">2. Private Licensed Person with DL No. Name</label>
+        </div>
+        <input id="plp1" type="text" class="form-control" placeholder="">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="tsda" value="option3">
+            <label class="form-check-label" for="inlineRadio3">3. TESDA</label>
+            <label class="form-check-label" for="inlineRadio3">Instructor</label>
+        </div>
+        <input id="tsda1" type="text" class="form-control" placeholder="">
+        <br>
+        <label>Highest Educational Attainment(EA)  </label>
+        <br>
+        <div class="form-check form-check-inline">
+              
+          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="pg" value="option1">
+          <label class="form-check-label" for="inlineRadio1">POST GRADUATE</label>
+      </div>
+      <br>
+      <div class="form-check form-check-inline">
+              
+        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="cllg" value="option1">
+        <label class="form-check-label" for="inlineRadio1">COLLEGE</label>
+      </div>
+      <br>
+      <div class="form-check form-check-inline">
+              
+        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="hs" value="option1">
+        <label class="form-check-label" for="inlineRadio1">HIGH SCHOOL</label>
+      </div>
+      <br>
+      <div class="form-check form-check-inline">
+              
+        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="elem" value="option1">
+        <label class="form-check-label" for="inlineRadio1">ELEMENTARY</label>
+      </div>
+       <br>
+       <br>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="">Blood Type</span>
+          </div>
+          <input id="btype" type="text" class="form-control" placeholder="">
+      </div>
+      <br>
+      <label>Organ Donor:  </label>
+      <div class="form-check form-check-inline">
+          
+          <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="organYes" value="option1">
+          <label class="form-check-label" for="inlineRadio1">Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="organNo" value="option2">
+          <label class="form-check-label" for="inlineRadio2">No</label>
+      </div>
+      <br>
+      <br>
+      <div class="form-check form-check-inline">
+          
+        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organAll" value="option1">
+        <label class="form-check-label" for="inlineRadio1">ALL</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organHeart" value="option2">
+        <label class="form-check-label" for="inlineRadio2">HEART</label>
+    </div>
+       
+    <div class="form-check form-check-inline">
+          
+      <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organEyes" value="option1">
+      <label class="form-check-label" for="inlineRadio1">EYES</label>
+  </div>
+  <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organLiver" value="option2">
+      <label class="form-check-label" for="inlineRadio2">LIVER</label>
+  </div>
+  <div class="form-check form-check-inline">
+          
+    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organBones" value="option1">
+    <label class="form-check-label" for="inlineRadio1">BONES</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organKidneys" value="option2">
+    <label class="form-check-label" for="inlineRadio2">KIDNEYS</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organCornea" value="option2">
+    <label class="form-check-label" for="inlineRadio2">CORNEA</label>
+  </div>
+  <div class="form-check form-check-inline">
+          
+    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organPancreas" value="option1">
+    <label class="form-check-label" for="inlineRadio1">PANCREAS</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organLungs" value="option2">
+    <label class="form-check-label" for="inlineRadio2">LUNGS</label>
+  </div>
+  <div class="form-check form-check-inline">
+          
+    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="organSkin" value="option1">
+    <label class="form-check-label" for="inlineRadio1">SKIN</label>
+  </div>
+  <br>
+  <br>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="">EYE COLOR</span>
+    </div>
+    <input id="icolor" type="text" class="form-control" placeholder="">
+  </div>
+  <br>
+  <label>TYPE OF APPLICATION (TOA)  </label>
+  <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="a_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">A. NEW</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="b_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">B. RENEWAL</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="c_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">C. CONVERSION OF FOREIGN DL</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="d_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">D. ADDITIONAL CODE OR CATEGORY</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="e_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">E. CHANGE OF DL CLASSIFICATION</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="f_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">F. EXPIRED DL WITH VALID FDL</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="g_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">G. DUPLICATE</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="h_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">H. DROPPING OF CATEGORY OR ADD'L OR REMOVAL OF DRIVING CONDITIONS</label>
+        </div>
+        <br>
+        <label>I. REVISIONS OF RECORDS  </label>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="i1_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">I1. CHANGE OF ADDRESS</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="i2_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">I2. CHANGE OF CIVIL STATUS</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="i3_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">I3. CHANGE NAME </label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="i4_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">I4. CHANGE OF BIRTHDATE</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="i5_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">I5. Others</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="j_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label>
+        </div>
+        <br>
+        <div class="form-check form-check-inline">
+                
+          <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="k_" value="option1">
+          <label class="form-check-label" for="inlineRadio1">K. CHANGE OF CLUTCH TYPE</label>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label>DRIVER'S LICENSE VEHICLE CATEGORY:  </label>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">EXISTING</th>
+                <th scope="col">APPLIED</th>
+                <th scope="col">VEHICLE CATEGORY</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">SV</th>
+                <th scope="col">NON PRO</th>
+                <th scope="col">PRO</th>
+                <th scope="col">CLUTCH TYPE: AT</th>
+                <th scope="col">CLUTCH TYPE: MT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                
+                <th scope="row">
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_a" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </th>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_a" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>A MOTORCYCLE<br>
+                L1 Two wheels with a maximum design speed not exceeding 50 kph <br>
+                L2 Three wheels with a maximum design speed not exceeding 50 kph <br>
+                L3 Two wheels with a maximum design speed exceeding 50 kph</td>
+                <td><img src="../pic1.png"></td>
+                <td></td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_a" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_a" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_a" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_a" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_a" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+              </tr>
+  
+              <tr>
+                <th scope="row">
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_a1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </th>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_a1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td> A1 TRICYCLE<br>
+                  L4 Motorcycle with side cars with a maximum design speed exceeding 50 kph <br>
+                  L5 Three wheels symmetrically arranged with a maximum design speed exceeding 50 kph<br>
+                  L6 Four wheels whose unladen mass is not more than 350kg with maximum design speed not exceeding 45 kph <br>
+                  L7 Four wheels whose unladen mass is not more than 550kg with maximum design speed not exceeding 45 kph</td>
+                <td><img src="../pic2.png"></td>
+                <td></td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_a1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_a1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_a1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_a1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_a1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+              </tr>
+  
+   
+              <tr>
+                
+                <th scope="row">
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_b" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </th>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_b" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>B<br>
+                  M1 Vehicles used for the carriage of passengers and comprising not more than 8 seats in addition to the
+   driver's seat with GVW up to 5000kgs.</td>
+                <td><img src="../pic3.png"></td>
+                <td></td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_b" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_b" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_b" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_b" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_b" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                
+                <th scope="row">
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_b1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </th>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_b1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>B1 <br>
+                  M2 Vehicles used for the carriage of passengers, comprising more than 8 seats in addition to the driver's
+   seat with GVW up to5000kgs.</td>
+                <td><img src="../pic4.png"></td>
+                <td></td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_b1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="nonpro_b1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions78" id="pro_b1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_b1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+                <td>
+                  <div class="form-check form-check-inline">
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_b1" value="option1">
+                    <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                  </div>
+                </td>
+              </tr>
+  
+              <tr>
+              <th scope="row">
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_b2" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </th>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_b2" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>B2 LIGHT COMMERCIAL VEHICLES<br>
+   N1 Vehicles used for the carriage of goods and having a GVW up to 3500kgs</td>
+              <td><img src="../pic5.png"></td>
+              <td></td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_b2" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_b2" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_b2" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_b2" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_b2" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+            </tr>
+  
+            <tr>
+              <th scope="row">
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_c" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </th>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_c" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>C HEAVY COMMERCIAL VEHICLES<br>
+                N2 Vehicles used for the carriage of goods and having a maximum GVW exceeding 3500kgs but not
+                exceeding 12000kgs <br>
+                N3 Vehicles used for the carriage of goods and having a maximum GVW exceeding 12000kgs.</td>
+              <td><img src="../pic6.png"></td>
+              <td></td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_c" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_c" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_c" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_c" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_c" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+            </tr>
+  
+  
+            <tr>
+              <th scope="row">
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_d" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </th>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_d" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>D BUSES, COACHES and OTHER PASSENGER VEHICLES<br>
+                M3 Vehicles used for the carriage of passengers, comprising more than 8 seats in addition to the driver's seat
+                and having a maximum GVW exceeding 5000kgs. </td>
+              <td><img src="../pic7.png"></td>
+              <td></td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_d" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_d" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_d" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_d" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_d" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+            </tr>
+  
+  
+            <tr>
+              <th scope="row">
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_be" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </th>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_be" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>BE ARTICULATED PASSENGER CARS<br>
+                 Vehicles with trailer GVW of no more than 3500kgs.<br>
+                O1 Trailers with a maximum GVW not exceeding 750kgs. <br>
+                O2 Trailers with a maximum GVW exceeding 750kgs, but not exceeding 3500kgs</td>
+              <td><img src="../pic8.png"></td>
+              <td></td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_be" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_be" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_be" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_be" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="mt_be" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+            </tr>
+              
+  
+            <tr>
+              <th scope="row">
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="existing_ce" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </th>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="applied_ce" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>CE HEAVY ARTICULATED VEHICLES<br>
+                  Articulated Commercial Vehicles with trailer GVW of more than
+                3500kgs <br>
+                O3 Trailers with a maximum GVW exceeding 3500kgs, but not exceeding 10000kgs. <br>
+                O4 Trailers with a maximum GVW exceeding 10000kgs.</td>
+              <td><img src="../pic9.png"></td>
+              <td></td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="sv_ce" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="nonpro_ce" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="pro_ce" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="at_ce" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+              <td>
+                <div class="form-check form-check-inline">
+                
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="mt_ce" value="option1">
+                  <!-- <label class="form-check-label" for="inlineRadio1">J. ENHANCEMENT OF DL</label> -->
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+  
+          <label>CONDITIONS  </label>
+          <br>
+          <div class="form-check form-check-inline">
+                
+            <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="cnd1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1 WEAR CORRECTIVE LENSES</label>
+          </div>
+          <br>
+          <div class="form-check form-check-inline">
+                
+            <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="cnd2" value="option1">
+            <label class="form-check-label" for="inlineRadio1">2 DRIVE ONLY WITH SPECIAL EQUIPMENT FOR UPPER LIMBS/LOWER LIMBS</label>
+          </div>
+          <br>
+          <div class="form-check form-check-inline">
+                
+            <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="cnd3" value="option1">
+            <label class="form-check-label" for="inlineRadio1">3 DRIVE CUSTOMIZE VEHICLE ONLY</label>
+          </div>
+          <br>
+          <div class="form-check form-check-inline">
+                
+            <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="cnd4" value="option1">
+            <label class="form-check-label" for="inlineRadio1">4 DAYLIGHT DRIVING ONLY</label>
+          </div>
+          <br>
+          <div class="form-check form-check-inline">
+                
+            <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="cnd5" value="option1">
+            <label class="form-check-label" for="inlineRadio1">5 HEARING AID IS REQUIRED</label>
+          </div>
+       
+        <br><br>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">FILL THIS UP ONLY IF YOUR <BR>
+              NAME ABOVE IS DIFFERENT <BR>
+              FROM YOUR NAME IN <BR>
+              PREVIOUS LICENSE</span>
+          </div>
+          <textarea id="prevname" class="form-control" placeholder="PREVIOUS NAME (Family Name, Middle Name, Last Name)"></textarea>
+          
+        </div>
+          <br>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">THIS IS TO CERTIFY UNDER PENALTY <br>
+              OF PERJURY THAT THE INFORMATION I <br>
+              HAVE GIVEN IS TRUE AND CORRECT <br> (BY SIGNING THIS FORM, I VOLUTARILY AUTHORIZE <br> LTO TO ALLOW DISCLOSURE OF THE <br> ABOVE PERSONAL INFORMATION<br> TO ANY AUTHORIZED GOVERNMENT AGENCY)</span>
+          </div>
+          <textarea id="sign1" class="form-control" style="font-size:8pt" placeholder="PRINTED NAME AND SIGNATURE"></textarea>
+        </textarea>
+        </div>
+  <br>
+        <label>TO BE ACCOMPLISHED BY LTO PERSONNEL ONLY:  </label>
+        <BR>
+        <label style="font: size 10pt" class="form-check-label" for="flexCheckDefault">
+          THIS IS TO CERTIFY THAT <br> I HAVE CAREFULLY EVALUATED THIS <br>
+  APPLICATION INCLUDING THE SUPPORTING DOCUMENT
+        </label>
+        <br>
+        <textarea id="sign2" class="form-control" style="font-size:8pt" placeholder="PRINTED NAME AND SIGNATURE (EVALUATOR)"></textarea>
+  
+   
+  
+  
+          
+  
+  
+        
+          <br>
+          <br>
+          
+          </div>
+          
+        
+      </form>
+    </div>
+
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // htt˜ps://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCMpx-C5NpWTJqWUXjA62E0R7q4G1NV6xk",
+          authDomain: "final-prac-c0843.firebaseapp.com",
+          databaseURL: "https://final-prac-c0843-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "final-prac-c0843",
+          storageBucket: "final-prac-c0843.appspot.com",
+          messagingSenderId: "511552209359",
+          appId: "1:511552209359:web:4e35913a6f4f06186d52ba"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import { getDatabase, ref, set, get, child, update, remove } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
+        const db = getDatabase();
+
+        var presentAddBox = document.getElementById("presentAdd");
+        var name_fmnameBox = document.getElementById("name_fmname");
+        var name_fnameBox = document.getElementById("name_fname");
+        var name_mnameBox = document.getElementById("name_mname");
+        var telcpBox = document.getElementById("telcp");
+        var haytBox = document.getElementById("hayt");
+        var weytBox = document.getElementById("weyt");
+        var tinnBox = document.getElementById("tinn");
+        var ntnBox = document.getElementById("ntn");
+        var sxBox = document.getElementById("sx");
+        var bdateBox = document.getElementById("bdate");
+        var licnumBox = document.getElementById("licnum");
+        var cs;
+        var sitiBox = document.getElementById("siti");
+        var muniBox = document.getElementById("muni");
+        var provBox = document.getElementById("prov");
+        var f_fmnameBox = document.getElementById("f_fmname");
+        var f_fnameBox = document.getElementById("f_fname");
+        var f_mnameBox = document.getElementById("f_mname");
+        var m_fmnameBox = document.getElementById("m_fmname");
+        var m_fnameBox = document.getElementById("m_fname");
+        var m_mnameBox = document.getElementById("m_mname");
+        var s_fmnameBox = document.getElementById("s_fmname");
+        var s_fnameBox = document.getElementById("s_fname");
+        var s_mnameBox = document.getElementById("s_mname");
+        var emp_bnameBox = document.getElementById("emp_bname");
+        var emp_telnumBox = document.getElementById("emp_telnum");
+        var emp_baddrBox = document.getElementById("emp_baddr");
+        var eme_contperBox = document.getElementById("eme_contper");
+        var eme_contadrrBox = document.getElementById("eme_contaddr");
+        var eme_contnoBox = document.getElementById("eme_contno");
+        var agency_codeBox = document.getElementById("agency_code");
+        var issue_dateBox = document.getElementById("issue_date");
+        var exp_dateBox = document.getElementById("exp_date");
+        var lca, dsa, dsa_info, hea, orgStat, orgWhat, toa, cnd;
+        var dlvc, existApplied_, svNonproPro_, atMt_;
+        var btypeBox = document.getElementById("btype");
+        var icolorBox = document.getElementById("icolor");
+        var prevnameBox = document.getElementById("prevname");
+        var sign1Box = document.getElementById("sign1");
+        var sign2Box = document.getElementById("sign2");
+
+
+        function saveLTOForm(){
+          var single2 = document.getElementById('single1').checked;
+          var married2 = document.getElementById('married1').checked;
+          var separated2 = document.getElementById('separated1').checked;
+          var widowed2 = document.getElementById('widowed1').checked;
+          if(single2==true){
+            cs = "single";
+          }
+          if(married2==true){
+            cs = "married";
+          }
+          if(separated2==true){
+            cs = "separated";
+          }
+          if(widowed2==true){
+            cs = "widowed";
+          }
+
+          var sdp1 = document.getElementById('sdp').checked;
+          var dl1 = document.getElementById('dl').checked;
+          var cl1 = document.getElementById('cl').checked;
+          if(sdp1==true){
+            lca = "student-driver's permit"
+          }
+          if(dl1==true){
+            lca = "driver's license"
+          }
+          if(cl1==true){
+            lca = "conductor's license"
+          }
+
+          var dsi_ = document.getElementById('dsi').checked;
+          var plp_ = document.getElementById('plp').checked;
+          var tsda_ = document.getElementById('tsda').checked;
+          if(dsi_==true){
+            // dsa = "driving school instructor";
+            var dsi1_ = document.getElementById("dsi1");
+            dsa = "driving school instructor";
+            dsa_info = dsi1_.value;
+          }
+          if(plp_==true){
+            var plp1_ = document.getElementById("plp1");
+            dsa = "private licensed person with dl no. name";
+            dsa_info = plp1_.value;
+          }
+          if(tsda_==true){
+            var tsda1_ = document.getElementById("tsda1");
+            dsa = "tesda instructor";
+            dsa_info = tsda1_.value;
+          }
+
+          var pg_ = document.getElementById('pg').checked;
+          var cllg_ = document.getElementById('cllg').checked;
+          var hs_ = document.getElementById('hs').checked;
+          var elem_ = document.getElementById('elem').checked;
+          if(pg_==true){
+            hea = "post graduate";
+          }
+          if(cllg_==true){
+            hea = "college";
+          }
+          if(hs_==true){
+            hea = "high school";
+          }
+          if(elem_==true){
+            hea = "elementary";
+          }
+
+          var organYes_ = document.getElementById('organYes').checked;
+          var organNo_ = document.getElementById('organNo').checked;
+          var organAll_ = document.getElementById('organAll').checked;
+          var organHeart_ = document.getElementById('organHeart').checked;
+          var organEyes_ = document.getElementById('organEyes').checked;
+          var organLiver_ = document.getElementById('organLiver').checked;
+          var organBones_ = document.getElementById('organBones').checked;
+          var organKidneys_ = document.getElementById('organKidneys').checked;
+          var organCornea_ = document.getElementById('organCornea').checked;
+          var organPancreas_ = document.getElementById('organPancreas').checked;
+          var organLungs_ = document.getElementById('organLungs').checked;
+          var organSkin_ = document.getElementById('organSkin').checked;
+          if(organYes_==true){
+            orgStat = "yes";
+          }
+          if(organNo_==true){
+            orgStat = "no";
+          }
+            if(organAll_==true){
+              orgWhat = "all";
+            }
+            if(organHeart_==true){
+              orgWhat = "heart";
+            }
+            if(organEyes_==true){
+              orgWhat = "eyes";
+            }
+            if(organLiver_==true){
+              orgWhat = "liver";
+            }
+            if(organBones_==true){
+              orgWhat = "bones";
+            }
+            if(organKidneys_==true){
+              orgWhat = "kidneys";
+            }
+            if(organCornea_==true){
+              orgWhat = "cornea";
+            }
+            if(organPancreas_==true){
+              orgWhat = "pancreas";
+            }
+            if(organLungs_==true){
+              orgWhat = "lungs";
+            }
+            if(organSkin_==true){
+              orgWhat = "skin";
+            }
+          
+
+          var a__ = document.getElementById('a_').checked;
+          var b__ = document.getElementById('b_').checked;
+          var c__ = document.getElementById('c_').checked;
+          var d__ = document.getElementById('d_').checked;
+          var e__ = document.getElementById('e_').checked;
+          var f__ = document.getElementById('f_').checked;
+          var g__ = document.getElementById('g_').checked;
+          var h__ = document.getElementById('h_').checked;
+          var i1__ = document.getElementById('i1_').checked;
+          var i2__ = document.getElementById('i2_').checked;
+          var i3__ = document.getElementById('i3_').checked;
+          var i4__ = document.getElementById('i4_').checked;
+          var i5__ = document.getElementById('i5_').checked;
+          var j__ = document.getElementById('j_').checked;
+          var k__ = document.getElementById('k_').checked;
+          if(a__==true){
+            toa = "new";
+          }
+          if(b__==true){
+            toa = "renewal";
+          }
+          if(c__==true){
+            toa = "conversion of foreign dl";
+          }
+          if(d__==true){
+            toa = "additional code or category";
+          }
+          if(e__==true){
+            toa = "change of dl classification";
+          }
+          if(f__==true){
+            toa = "expired dl with valid fdl";
+          }
+          if(g__==true){
+            toa = "duplicate";
+          }
+          if(h__==true){
+            toa = "dropping of category or add'l or removal of driving conditions";
+          }
+          if(i1__==true){
+            toa = "change of address";
+          }
+          if(i2__==true){
+            toa = "change of civil status";
+          }
+          if(i3__==true){
+            toa = "change name";
+          }
+          if(i4__==true){
+            toa = "change of birthdate";
+          }
+          if(i5__==true){
+            toa = "others";
+          }
+          if(j__==true){
+            toa = "enhancement of dl";
+          }
+          if(k__==true){
+            toa = "change of clutch type";
+          }
+
+          var existing_a_ = document.getElementById('existing_a').checked;
+          var applied_a_ = document.getElementById('applied_a').checked;
+          var sv_a_ = document.getElementById('sv_a').checked;
+          var nonpro_a_ = document.getElementById('nonpro_a').checked;
+          var pro_a_ = document.getElementById('pro_a').checked;
+          var at_a_ = document.getElementById('at_a').checked;
+          var mt_a_ = document.getElementById('mt_a').checked;
+          if(existing_a_==true){
+            existApplied_ = "existing";
+            dlvc = "A";
+          }
+          if(applied_a_==true){
+            existApplied_ = "applied";
+            dlvc = "A";
+          }
+          if(sv_a_==true){
+            svNonproPro_ = "sv";
+            dlvc = "A";
+          }
+          if(nonpro_a_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "A";
+          }
+          if(pro_a_==true){
+            svNonproPro_ = "pro";
+            dlvc = "A";
+          }
+          if(at_a_==true){
+            atMt_ = "at";
+            dlvc = "A";
+          }
+          if(mt_a_==true){
+            atMt_ = "mt";
+            dlvc = "A";
+          }
+
+          var existing_a1_ = document.getElementById('existing_a1').checked;
+          var applied_a1_ = document.getElementById('applied_a1').checked;
+          var sv_a1_ = document.getElementById('sv_a1').checked;
+          var nonpro_a1_ = document.getElementById('nonpro_a1').checked;
+          var pro_a1_ = document.getElementById('pro_a1').checked;
+          var at_a1_ = document.getElementById('at_a1').checked;
+          var mt_a1_ = document.getElementById('mt_a1').checked;
+          if(existing_a1_==true){
+            existApplied_ = "existing";
+            dlvc = "A1";
+          }
+          if(applied_a1_==true){
+            existApplied_ = "applied";
+            dlvc = "A1";
+          }
+          if(sv_a1_==true){
+            svNonproPro_ = "sv";
+            dlvc = "A1";
+          }
+          if(nonpro_a1_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "A1";
+          }
+          if(pro_a1_==true){
+            svNonproPro_ = "pro";
+            dlvc = "A1";
+          }
+          if(at_a1_==true){
+            atMt_ = "at";
+            dlvc = "A1";
+          }
+          if(mt_a1_==true){
+            atMt_ = "mt";
+            dlvc = "A1";
+          }
+
+          var existing_b_ = document.getElementById('existing_b').checked;
+          var applied_b_ = document.getElementById('applied_b').checked;
+          var sv_b_ = document.getElementById('sv_b').checked;
+          var nonpro_b_ = document.getElementById('nonpro_b').checked;
+          var pro_b_ = document.getElementById('pro_b').checked;
+          var at_b_ = document.getElementById('at_b').checked;
+          var mt_b_ = document.getElementById('mt_b').checked;
+          if(existing_b_==true){
+            existApplied_ = "existing";
+            dlvc = "B";
+          }
+          if(applied_b_==true){
+            existApplied_ = "applied";
+            dlvc = "B";
+          }
+          if(sv_b_==true){
+            svNonproPro_ = "sv";
+            dlvc = "B";
+          }
+          if(nonpro_b_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "B";
+          }
+          if(pro_b_==true){
+            svNonproPro_ = "pro";
+            dlvc = "B";
+          }
+          if(at_b_==true){
+            atMt_ = "at";
+            dlvc = "B";
+          }
+          if(mt_b_==true){
+            atMt_ = "mt";
+            dlvc = "B";
+          }
+
+          var existing_b1_ = document.getElementById('existing_b1').checked;
+          var applied_b1_ = document.getElementById('applied_b1').checked;
+          var sv_b1_ = document.getElementById('sv_b1').checked;
+          var nonpro_b1_ = document.getElementById('nonpro_b1').checked;
+          var pro_b1_ = document.getElementById('pro_b1').checked;
+          var at_b1_ = document.getElementById('at_b1').checked;
+          var mt_b1_ = document.getElementById('mt_b1').checked;
+          if(existing_b1_==true){
+            existApplied_ = "existing";
+            dlvc = "B1";
+          }
+          if(applied_b1_==true){
+            existApplied_ = "applied";
+            dlvc = "B1";
+          }
+          if(sv_b1_==true){
+            svNonproPro_ = "sv";
+            dlvc = "B1";
+          }
+          if(nonpro_b1_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "B1";
+          }
+          if(pro_b1_==true){
+            svNonproPro_ = "pro";
+            dlvc = "B1";
+          }
+          if(at_b1_==true){
+            atMt_ = "at";
+            dlvc = "B1";
+          }
+          if(mt_b1_==true){
+            atMt_ = "mt";
+            dlvc = "B1";
+          }
+
+          var existing_b2_ = document.getElementById('existing_b2').checked;
+          var applied_b2_ = document.getElementById('applied_b2').checked;
+          var sv_b2_ = document.getElementById('sv_b2').checked;
+          var nonpro_b2_ = document.getElementById('nonpro_b2').checked;
+          var pro_b2_ = document.getElementById('pro_b2').checked;
+          var at_b2_ = document.getElementById('at_b2').checked;
+          var mt_b2_ = document.getElementById('mt_b2').checked;
+          if(existing_b2_==true){
+            existApplied_ = "existing";
+            dlvc = "B2";
+          }
+          if(applied_b2_==true){
+            existApplied_ = "applied";
+            dlvc = "B2";
+          }
+          if(sv_b2_==true){
+            svNonproPro_ = "sv";
+            dlvc = "B2";
+          }
+          if(nonpro_b2_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "B2";
+          }
+          if(pro_b2_==true){
+            svNonproPro_ = "pro";
+            dlvc = "B2";
+          }
+          if(at_b2_==true){
+            atMt_ = "at";
+            dlvc = "B2";
+          }
+          if(mt_b2_==true){
+            atMt_ = "mt";
+            dlvc = "B2";
+          }
+
+          var existing_c_ = document.getElementById('existing_c').checked;
+          var applied_c_ = document.getElementById('applied_c').checked;
+          var sv_c_ = document.getElementById('sv_c').checked;
+          var nonpro_c_ = document.getElementById('nonpro_c').checked;
+          var pro_c_ = document.getElementById('pro_c').checked;
+          var at_c_ = document.getElementById('at_c').checked;
+          var mt_c_ = document.getElementById('mt_c').checked;
+          if(existing_c_==true){
+            existApplied_ = "existing";
+            dlvc = "C";
+          }
+          if(applied_c_==true){
+            existApplied_ = "applied";
+            dlvc = "C";
+          }
+          if(sv_c_==true){
+            svNonproPro_ = "sv";
+            dlvc = "C";
+          }
+          if(nonpro_c_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "C";
+          }
+          if(pro_c_==true){
+            svNonproPro_ = "pro";
+            dlvc = "C";
+          }
+          if(at_c_==true){
+            atMt_ = "at";
+            dlvc = "C";
+          }
+          if(mt_c_==true){
+            atMt_ = "mt";
+            dlvc = "C";
+          }
+
+          var existing_d_ = document.getElementById('existing_d').checked;
+          var applied_d_ = document.getElementById('applied_d').checked;
+          var sv_d_ = document.getElementById('sv_d').checked;
+          var nonpro_d_ = document.getElementById('nonpro_d').checked;
+          var pro_d_ = document.getElementById('pro_d').checked;
+          var at_d_ = document.getElementById('at_d').checked;
+          var mt_d_ = document.getElementById('mt_d').checked;
+          if(existing_d_==true){
+            existApplied_ = "existing";
+            dlvc = "D";
+          }
+          if(applied_d_==true){
+            existApplied_ = "applied";
+            dlvc = "D";
+          }
+          if(sv_d_==true){
+            svNonproPro_ = "sv";
+            dlvc = "D";
+          }
+          if(nonpro_d_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "D";
+          }
+          if(pro_d_==true){
+            svNonproPro_ = "pro";
+            dlvc = "D";
+          }
+          if(at_d_==true){
+            atMt_ = "at";
+            dlvc = "D";
+          }
+          if(mt_d_==true){
+            atMt_ = "mt";
+            dlvc = "D";
+          }
+
+          var existing_be_ = document.getElementById('existing_be').checked;
+          var applied_be_ = document.getElementById('applied_be').checked;
+          var sv_be_ = document.getElementById('sv_be').checked;
+          var nonpro_be_ = document.getElementById('nonpro_be').checked;
+          var pro_be_ = document.getElementById('pro_be').checked;
+          var at_be_ = document.getElementById('at_be').checked;
+          var mt_be_ = document.getElementById('mt_be').checked;
+          if(existing_be_==true){
+            existApplied_ = "existing";
+            dlvc = "BE";
+          }
+          if(applied_be_==true){
+            existApplied_ = "applied";
+            dlvc = "BE";
+          }
+          if(sv_be_==true){
+            svNonproPro_ = "sv";
+            dlvc = "BE";
+          }
+          if(nonpro_be_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "BE";
+          }
+          if(pro_be_==true){
+            svNonproPro_ = "pro";
+            dlvc = "BE";
+          }
+          if(at_be_==true){
+            atMt_ = "at";
+            dlvc = "BE";
+          }
+          if(mt_be_==true){
+            atMt_ = "mt";
+            dlvc = "BE";
+          }
+
+          var existing_ce_ = document.getElementById('existing_ce').checked;
+          var applied_ce_ = document.getElementById('applied_ce').checked;
+          var sv_ce_ = document.getElementById('sv_ce').checked;
+          var nonpro_ce_ = document.getElementById('nonpro_ce').checked;
+          var pro_ce_ = document.getElementById('pro_ce').checked;
+          var at_ce_ = document.getElementById('at_ce').checked;
+          var mt_ce_ = document.getElementById('mt_ce').checked;
+          if(existing_ce_==true){
+            existApplied_ = "existing";
+            dlvc = "CE";
+          }
+          if(applied_ce_==true){
+            existApplied_ = "applied";
+            dlvc = "CE";
+          }
+          if(sv_ce_==true){
+            svNonproPro_ = "sv";
+            dlvc = "CE";
+          }
+          if(nonpro_ce_==true){
+            svNonproPro_ = "non pro";
+            dlvc = "CE";
+          }
+          if(pro_ce_==true){
+            svNonproPro_ = "pro";
+            dlvc = "CE";
+          }
+          if(at_ce_==true){
+            atMt_ = "at";
+            dlvc = "CE";
+          }
+          if(mt_ce_==true){
+            atMt_ = "mt";
+            dlvc = "CE";
+          }
+
+          var cnd1_ = document.getElementById('cnd1').checked;
+          var cnd2_ = document.getElementById('cnd2').checked;
+          var cnd3_ = document.getElementById('cnd3').checked;
+          var cnd4_ = document.getElementById('cnd4').checked;
+          var cnd5_ = document.getElementById('cnd5').checked;
+          if(cnd1_==true){
+            cnd = "wear corrective lenses";
+          }
+          if(cnd2_==true){
+            cnd = "drive only with special equipment for upper limbs/lower limbs";
+          }
+          if(cnd3_==true){
+            cnd = "drive customize vehicle only";
+          }
+          if(cnd4_==true){
+            cnd = "daylight driving only";
+          }
+          if(cnd5_==true){
+            cnd = "hearing aid is required";
+          }
+
+          const dbref = ref(db);
+            get(child(dbref, "LoggedIn/")).then((snapshot)=>{
+              var ki = snapshot.child("user").val();
+
+            set(ref(db, 'Forms/' + ki), {
+              familyName: name_fmnameBox.value,
+              firstName: name_fnameBox.value,
+              middleName: name_mnameBox.value,
+              presentAdd: presentAddBox.value,
+              telCp: telcpBox.value,
+              tin: tinnBox.value,
+              nationality: ntnBox.value,
+              sex: sxBox.value,
+              bdate: bdateBox.value,
+              height: haytBox.value,
+              weight: weytBox.value,
+              licNum: licnumBox.value,
+              cs: cs,
+              city: sitiBox.value,
+              municipality: muniBox.value,
+              province: provBox.value,
+              fatherFamilyName: f_fmnameBox.value,
+              fatherFirstName: f_fnameBox.value,
+              fatherMiddleName: f_mnameBox.value,
+              motherFamilyName: m_fmnameBox.value,
+              motherFirstName: m_fnameBox.value,
+              motherMiddleName: m_mnameBox.value,
+              spouseFamilyName: s_fmnameBox.value,
+              spouseFirstName: s_fnameBox.value,
+              spouseMiddleName: s_mnameBox.value,
+              employerBusName: emp_bnameBox.value,
+              employerTelNum: emp_telnumBox.value,
+              employerBusAddr: emp_baddrBox.value,
+              emergencyContPer: eme_contperBox.value,
+              emergencyContAddr: eme_contadrrBox.value,
+              emergencyContNo: eme_contadrrBox.value,
+              agencyCode: agency_codeBox.value,
+              issueDate: issue_dateBox.value,
+              expiryDate: exp_dateBox.value,
+              lca: lca,
+              dsa: dsa,
+              dsaInfo: dsa_info,
+              hea: hea,
+              bloodType: btypeBox.value,
+              orgStat: orgStat,
+              orgWhat: orgWhat,
+              eyeColor: icolorBox.value,
+              toa: toa,
+              dlvc: dlvc,
+              existApplied: existApplied_,
+              svNonproPro: svNonproPro_,
+              atMt: atMt_,
+              cnd: cnd,
+              prevName: prevnameBox.value,
+              sign1: sign1Box.value,
+              sign2: sign2Box.value,
+              status: "waiting"
+            })
+            .then(()=>{
+                alert("successful");
+                // go to another file
+                window.location = "./userHome.html";
+            })
+            .catch(()=>{
+                alert("unsuccessful, error");
+            })
+            });    
+        }
+            
+        saveFormBtn.addEventListener('click', saveLTOForm);
+
+
+      </script>
+
+</body>
+</html>
